@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Antimatter Dimensions NG*</title>
+	<link rel="stylesheet" type="text/css" href="antimatter.css">
+</head>
+<header>
+     <div class="navBar">
+          <button onclick='window.location.href="index.htm";' class="navBarButton">Dimensions</button>
+          <button onclick='window.location.href="matterstudies.htm";' class="navBarButton">Matter Studies</button>
+     </div>
+     <div id="notationArea">
+          <p id="notationText">Notation:</p>
+          <div id="standardOption">
+               <p>Standard:</p>
+               <input type="radio" name="notation" id="standardRadio" checked="checked">
+          </div>          
+          <div id="scientificOption">
+               <p >Scientific:</p>
+               <input type="radio" name="notation" id="scientificRadio">
+          </div>         
+    </div>
+	<div id="antimatterCounter">
+          <p id="antimatterAmount">0 Antimatter</p>
+          <p id="antimatterPerSec">+0 antimatter per sec</p>
+     </div>
+     <button id="buyAllButton" onclick="buyAll()">Buy all Dimensions</button>
+
+</header>
+<body>
+	<!--First Dimension-->
+	<div id="dim">
+     	<p>First Dimension</p>
+     	<p class="multiplier" id="dim1Multiplier">1X</p>
+     	<p class="dimAmount" id="dim1Amount">0</p>
+     	<p class="dimGrowth" id="dim1Growth">+0/s</p>
+     	<button onclick="buyDimension1()" id="dim1Button" class="buyButton buttonUnavailable">Buy First Dimension: 10 Antimatter</button>
+     	<button onclick="buyDimension1next10()" id=dim1Button10 class="buy10Button buttonUnavailable">Buy til next 10: 100 Antimatter</button>
+	</div>
+	<!--Second Dimension-->
+	<div id="dim">
+     	<p>Second Dimension</p>
+     	<p class="multiplier" id="dim2Multiplier">1X</p>
+     	<p class="dimAmount" id="dim2Amount">0</p>
+     	<p class="dimGrowth" id="dim2Growth">+0/s</p>
+     	<button onclick="buyDimension2()" id="dim2Button" class="buyButton buttonUnavailable">Buy Second Dimension: 100 Antimatter</button>
+     	<button onclick="buyDimension2next10()" id=dim2Button10 class="buy10Button buttonUnavailable" >Buy til next 10: 1000 Antimatter</button>
+	</div>
+	<!--Third Dimension-->
+	<div id="dim">
+     	<p>Third Dimension</p>
+     	<p class="multiplier" id="dim3Multiplier">1X</p>
+     	<p class="dimAmount" id="dim3Amount">0</p>
+     	<p class="dimGrowth" id="dim3Growth">+0/s</p>
+     	<button onclick="buyDimension3()" id="dim3Button" class="buyButton buttonUnavailable">Buy Third Dimension: 100 Antimatter</button>
+     	<button onclick="buyDimension3next10()" id=dim3Button10 class="buy10Button buttonUnavailable">Buy til next 10: 1000 Antimatter</button>
+	</div>
+	<!--Fourth Dimension-->
+	<div id="dim">
+     	<p>Fourth Dimension</p>
+     	<p class="multiplier" id="dim4Multiplier">1X</p>
+     	<p class="dimAmount" id="dim4Amount">0</p>
+     	<p class="dimGrowth" id="dim4Growth">+0/s</p>
+     	<button onclick="buyDimension4()" id="dim4Button" class="buyButton buttonUnavailable">Buy Fourth Dimension: 100 Antimatter</button>
+     	<button onclick="buyDimension4next10()" id=dim4Button10 class="buy10Button buttonUnavailable">Buy til next 10: 1000 Antimatter</button>
+	</div>
+	<!--Fifth Dimension-->
+	<div id="dim">
+     	<p>Fifth Dimension</p>
+     	<p class="multiplier" id="dim5Multiplier">1X</p>
+     	<p class="dimAmount" id="dim5Amount">0</p>
+     	<p class="dimGrowth" id="dim5Growth">+0/s</p>
+     	<button onclick="buyDimension5()" id="dim5Button" class="buyButton buttonUnavailable">Buy Fifth Dimension: 100 Antimatter</button>
+     	<button onclick="buyDimension5next10()" id=dim5Button10 class="buy10Button buttonUnavailable">Buy til next 10: 1000 Antimatter</button>
+	</div>
+	<!--Sixth Dimension-->
+	<div id="dim">
+     	<p>Sixth Dimension</p>
+     	<p class="multiplier" id="dim6Multiplier">1X</p>
+     	<p class="dimAmount" id="dim6Amount">0</p>
+     	<p class="dimGrowth" id="dim6Growth">+0/s</p>
+     	<button onclick="buyDimension6()" id="dim6Button" class="buyButton buttonUnavailable">Buy Sixth Dimension: 100 Antimatter</button>
+     	<button onclick="buyDimension6next10()" id=dim6Button10 class="buy10Button buttonUnavailable">Buy til next 10: 1000 Antimatter</button>
+	</div>
+	<!--Seventh Dimension-->
+	<div id="dim">
+     	<p>Seventh Dimension</p>
+     	<p class="multiplier" id="dim7Multiplier">1X</p>
+     	<p class="dimAmount" id="dim7Amount">0</p>
+     	<p class="dimGrowth" id="dim7Growth">+0/s</p>
+     	<button onclick="buyDimension7()" id="dim7Button" class="buyButton buttonUnavailable">Buy Seventh Dimension: 100 Antimatter</button>
+     	<button onclick="buyDimension7next10()" id=dim7Button10 class="buy10Button buttonUnavailable">Buy til next 10: 1000 Antimatter</button>
+	</div>
+	<!--Eighth Dimension-->
+	<div id="dim">
+     	<p>Eighth Dimension</p>
+     	<p class="multiplier" id="dim8Multiplier">1X</p>
+     	<p class="dimAmount" id="dim8Amount">0</p>
+     	<p class="dimGrowth" id="dim8Growth">+0/s</p>
+     	<button onclick="buyDimension8()" id="dim8Button" class="buyButton buttonUnavailable">Buy Eighth Dimension: 100 Antimatter</button>
+     	<button onclick="buyDimension8next10()" id=dim8Button10 class="buy10Button buttonUnavailable">Buy til next 10: 1000 Antimatter</button>
+	</div>
+     <!--Prestige-->
+     <div id="prestige">
+          <div id="dimensionBoost">
+               <p>Dimensional Boost</p>
+               <p id="dimensionBoostText">Requires 10 Eighth Dimensions</p>
+               <button id="dimensionBoostButton" onclick="dimensionBoostF()">Dimensional Boost for 2X on all Dimensions</button>
+          </div>
+          <div id="galaxy">
+               <p>New Galaxy</p>
+               <p id="galaxyCostText">Requires 10 Dimensional Boosts</p>
+               <button id="galaxyButton" onclick="newGalaxy()">Start a new galaxy for 0 Matter</button>
+          </div>
+     </div>
+</body>
+<script src="antimatter.js"></script>
+</html>
