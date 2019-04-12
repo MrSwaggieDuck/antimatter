@@ -190,37 +190,37 @@ if(JSON.parse(localStorage.getItem("studie21bought")) == true) {
 	studie21Multiplier = 1;
 }
 if(JSON.parse(localStorage.getItem("studie22bought")) == true) {
-	studie22Multiplier = Math.log10(antimatter+1);
+	studie22Multiplier = Math.log10(antimatter+1)/2;
 } else {
 	studie22Multiplier = 1;
 }
 if(JSON.parse(localStorage.getItem("studie31bought")) == true) {
-	studie31Multiplier = Math.log10(antimatter+1);
+	studie31Multiplier = Math.log10(antimatter+1)/3;
 } else {
 	studie31Multiplier = 1;
 }
 if(JSON.parse(localStorage.getItem("studie32bought")) == true) {
-	studie32Multiplier = Math.log10(antimatter+1);
+	studie32Multiplier = Math.log10(antimatter+1)/4;
 } else {
 	studie32Multiplier = 1;
 }
 if(JSON.parse(localStorage.getItem("studie41bought")) == true) {
-	studie41Multiplier = Math.log10(antimatter+1);
+	studie41Multiplier = Math.log10(antimatter+1)/5;
 } else {
 	studie41Multiplier = 1;
 }
 if(JSON.parse(localStorage.getItem("studie42bought")) == true) {
-	studie42Multiplier = Math.log10(antimatter+1);
+	studie42Multiplier = Math.log10(antimatter+1)/6;
 } else {
 	studie42Multiplier = 1;
 }
 if(JSON.parse(localStorage.getItem("studie51bought")) == true) {
-	studie51Multiplier = Math.log10(antimatter+1);
+	studie51Multiplier = Math.log10(antimatter+1)/7;
 } else {
 	studie51Multiplier = 1;
 }
 if(JSON.parse(localStorage.getItem("studie52bought")) == true) {
-	studie52Multiplier = Math.log10(antimatter+1);
+	studie52Multiplier = Math.log10(antimatter+1)/8;
 } else {
 	studie52Multiplier = 1;
 }
@@ -286,7 +286,7 @@ function update() {
 	dimension6.amount += (dimension7.amount*dimension7.multiplier*studie51Multiplier) / 10;
 	dimension7.amount += (dimension8.amount*dimension8.multiplier*studie52Multiplier) / 10;
 
-	document.querySelector("#matterCounter").innerHTML = "You have " + matter + " Matter";
+	document.querySelector("#matterCounter").innerHTML = "You have " + Math.floor(matter) + " Matter";
 	if (studie12.bought == true) {
 		document.querySelector("#studie12Button").classList.add("studieButtonBought");
 	} else if (matter >= studie12.cost) {
@@ -412,13 +412,13 @@ function update() {
 		document.querySelector("#studie62Button").classList.remove("studieButtonAvailable");
 	}
 	document.querySelector("#studie21Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
-	document.querySelector("#studie22Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
-	document.querySelector("#studie31Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
-	document.querySelector("#studie32Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
-	document.querySelector("#studie41Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
-	document.querySelector("#studie42Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
-	document.querySelector("#studie51Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
-	document.querySelector("#studie52Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
+	document.querySelector("#studie22Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/2*10)/10) + "x";
+	document.querySelector("#studie31Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/3*10)/10) + "x";
+	document.querySelector("#studie32Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/4*10)/10) + "x";
+	document.querySelector("#studie41Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/5*10)/10) + "x";
+	document.querySelector("#studie42Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/6*10)/10) + "x";
+	document.querySelector("#studie51Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/7*10)/10) + "x";
+	document.querySelector("#studie52Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/8*10)/10) + "x";
 	
 	save();
 }

@@ -349,37 +349,37 @@ function update() {
 		studie21Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie22bought")) == true) {
-		studie22Multiplier = Math.log10(antimatter+1);
+		studie22Multiplier = Math.log10(antimatter+1)/2;
 	} else {
 		studie22Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie31bought")) == true) {
-		studie31Multiplier = Math.log10(antimatter+1);
+		studie31Multiplier = Math.log10(antimatter+1)/3;
 	} else {
 		studie31Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie32bought")) == true) {
-		studie32Multiplier = Math.log10(antimatter+1);
+		studie32Multiplier = Math.log10(antimatter+1)/4;
 	} else {
 		studie32Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie41bought")) == true) {
-		studie41Multiplier = Math.log10(antimatter+1);
+		studie41Multiplier = Math.log10(antimatter+1)/5;
 	} else {
 		studie41Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie42bought")) == true) {
-		studie42Multiplier = Math.log10(antimatter+1);
+		studie42Multiplier = Math.log10(antimatter+1)/6;
 	} else {
 		studie42Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie51bought")) == true) {
-		studie51Multiplier = Math.log10(antimatter+1);
+		studie51Multiplier = Math.log10(antimatter+1)/7;
 	} else {
 		studie51Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie52bought")) == true) {
-		studie52Multiplier = Math.log10(antimatter+1);
+		studie52Multiplier = Math.log10(antimatter+1)/8;
 	} else {
 		studie52Multiplier = 1;
 	}
@@ -401,9 +401,9 @@ function update() {
 	} else {
 		document.querySelector("#dimensionBoostButton").innerHTML = "Dimensional Boost for 2X on all Dimension";
 	}
-	document.querySelector("#dimensionBoostText").innerHTML = "Requires " + Math.round(convert(dimensionBoost.amount*10+10)) + " Eighth Dimensions";
+	document.querySelector("#dimensionBoostText").innerHTML = "Requires " + Math.ceil(dimensionBoost.cost) + " Eighth Dimensions";
 	if(dimensionBoost.amount >= 5) {
-		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for " + Math.round((dimensionBoost.amount-4+Math.pow(dimensionBoost.amount, 1.1))) + " Matter";
+		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for " + Math.round(Math.pow(1.5, dimensionBoost.amount)) + " Matter";
 	} else {
 		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for 0 Matter";
 	}
@@ -734,7 +734,11 @@ function reset() {
 
 function dimensionBoostF() {
 	if(dimension8.amount >= dimensionBoost.cost) {
-		dimensionBoost.cost = dimensionBoost.amount*10+10;
+		if(dimensionBoost.amount < 10) {
+			dimensionBoost.cost = dimensionBoost.amount*10+10;
+		} else if(dimensionBoost.amount >= 10) {
+			dimensionBoost.cost *= 1.1;
+		}
 		dimensionBoost.amount += 1;
 		if (JSON.parse(localStorage.getItem("studie53bought")) == true) {
 			dimensionBoost.multiplier = Math.pow(2.4, dimensionBoost.amount);
@@ -801,7 +805,7 @@ function dimensionBoostF() {
 
 function newGalaxy() {
 	if(dimensionBoost.amount >= 5) {
-		matter += dimensionBoost.amount - 4 + Math.pow(dimensionBoost.amount, 1.1);
+		matter += Math.pow(1.5, dimensionBoost.amount);
 		antimatter = 10;
 		dimensionBoost = {
 			cost:10,

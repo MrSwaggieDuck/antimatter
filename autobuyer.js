@@ -316,7 +316,7 @@ function buyAutobuyer(autobuyer) {
 }
 
 function update() {
-    document.querySelector("#matterCounter").innerHTML = "You have " + matter + " Matter";
+    document.querySelector("#matterCounter").innerHTML = "You have " + Math.floor(matter) + " Matter";
     if(matter >= autobuyer1.cost) {
         document.querySelector("#autobuyerButton1").classList.add("buttonAvailable");
         document.querySelector("#autobuyerButton1").classList.remove("buttonUnavailable");
