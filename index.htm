@@ -7,7 +7,8 @@
 <header>
      <div class="navBar">
           <button onclick='window.location.href="index.htm";' class="navBarButton">Dimensions</button>
-          <button onclick='window.location.href="matterstudies.htm";' class="navBarButton">Matter Studies</button>
+		<button onclick='window.location.href="matterstudies.htm";' class="navBarButton">Matter Studies</button>
+		<button id="autobuyersNav" class="navBarButton">Autobuyers</button>
      </div>
      <div id="notationArea">
           <p id="notationText">Notation:</p>
@@ -24,7 +25,7 @@
           <p id="antimatterAmount">0 Antimatter</p>
           <p id="antimatterPerSec">+0 antimatter per sec</p>
      </div>
-     <button id="buyAllButton" onclick="buyAll()">Buy all Dimensions</button>
+     <button id="buyAllButton" onclick="buyAll()">Buy all Dimensions (M)</button>
 
 </header>
 <body>
@@ -109,7 +110,7 @@
           </div>
           <div id="galaxy">
                <p>New Galaxy</p>
-               <p id="galaxyCostText">Requires 10 Dimensional Boosts</p>
+               <p id="galaxyCostText">Requires 5 Dimensional Boosts</p>
                <button id="galaxyButton" onclick="newGalaxy()">Start a new galaxy for 0 Matter</button>
           </div>
      </div>
