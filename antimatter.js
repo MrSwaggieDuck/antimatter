@@ -401,9 +401,9 @@ function update() {
 	} else {
 		document.querySelector("#dimensionBoostButton").innerHTML = "Dimensional Boost for 2X on all Dimension";
 	}
-	document.querySelector("#dimensionBoostText").innerHTML = "Requires " + Math.round(convert(dimensionBoost.cost)) + " Eighth Dimensions";
+	document.querySelector("#dimensionBoostText").innerHTML = "Requires " + Math.round(convert(dimensionBoost.amount*10+10)) + " Eighth Dimensions";
 	if(dimensionBoost.amount >= 5) {
-		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for " + (dimensionBoost.amount-4) + " Matter";
+		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for " + Math.round((dimensionBoost.amount-4+Math.pow(dimensionBoost.amount, 1.1))) + " Matter";
 	} else {
 		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for 0 Matter";
 	}
@@ -734,7 +734,7 @@ function reset() {
 
 function dimensionBoostF() {
 	if(dimension8.amount >= dimensionBoost.cost) {
-		dimensionBoost.cost += 10;
+		dimensionBoost.cost = dimensionBoost.amount*10+10;
 		dimensionBoost.amount += 1;
 		if (JSON.parse(localStorage.getItem("studie53bought")) == true) {
 			dimensionBoost.multiplier = Math.pow(2.4, dimensionBoost.amount);
@@ -801,7 +801,7 @@ function dimensionBoostF() {
 
 function newGalaxy() {
 	if(dimensionBoost.amount >= 5) {
-		matter += dimensionBoost.amount - 4;
+		matter += dimensionBoost.amount - 4 + Math.pow(dimensionBoost.amount, 1.1);
 		antimatter = 10;
 		dimensionBoost = {
 			cost:10,
