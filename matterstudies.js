@@ -51,8 +51,67 @@ var studie53 = {
 	cost:40,
 	bought:false,
 }
+var studie62 = {
+	cost:50,
+	bought:false,
+}
+var antimatter = 10;
+var matter = 0;
+var dimensionBoost = {
+		cost:10,
+		multiplier:1,
+		amount:0,
+}
+var dimension1 = {
+	cost:10,
+	amount:0,
+	multiplier:1,
+	next10:10,
+};
+var dimension2 = {
+	cost:1000,
+	amount:0,
+	multiplier:1,
+	next10:10,
+};
+var dimension3 = {
+	cost:100000,
+	amount:0,
+	multiplier:1,
+	next10:10,
+};
+var dimension4 = {
+	cost:10000000,
+	amount:0,
+	multiplier:1,
+	next10:10,
+};
+var dimension5 = {
+	cost:1000000000,
+	amount:0,
+	multiplier: 1,
+    next10:10
+};
+var dimension6 = {
+	cost:100000000000,
+	amount:0,
+	multiplier: 1,
+	next10:10
+};
+var dimension7 = {
+	cost:10000000000000,
+	amount:0,
+	multiplier: 1,
+	next10:10,
+};
+var dimension8 = {
+	cost:1000000000000000,
+	amount:0,
+	multiplier: 1,
+	next10:10,
+};
 
-if (localStorage.hasOwnProperty("matter")) {
+if (JSON.parse(localStorage.getItem("studie12bought")) == true || JSON.parse(localStorage.getItem("studie12bought")) == false) {
 	matter = JSON.parse(localStorage.getItem("matter"));
 	studie12.bought = JSON.parse(localStorage.getItem("studie12bought"));
 	studie21.bought = JSON.parse(localStorage.getItem("studie21bought"));
@@ -67,6 +126,7 @@ if (localStorage.hasOwnProperty("matter")) {
 	studie51.bought = JSON.parse(localStorage.getItem("studie51bought"));
 	studie52.bought = JSON.parse(localStorage.getItem("studie52bought"));
 	studie53.bought = JSON.parse(localStorage.getItem("studie53bought"));
+	studie62.bought = JSON.parse(localStorage.getItem("studie62bought"));
 	var antimatter = Number(localStorage.getItem("antimatter"));
 	var dimensionBoost = {
 		cost:Number(localStorage.getItem("dimensionBoostCost")),
@@ -165,6 +225,10 @@ if(JSON.parse(localStorage.getItem("studie52bought")) == true) {
 	studie52Multiplier = 1;
 }
 
+if(JSON.parse(localStorage.getItem("studie62bought")) == true) {
+	document.querySelector("#autobuyersNav").onclick = function() {window.location.href="autobuyers.htm"};
+}
+
 function buyStudie(studie) {
 	if (studie == 12 && matter >= studie12.cost && studie12.bought == false) {
 		matter -= studie12.cost;
@@ -205,6 +269,10 @@ function buyStudie(studie) {
 	} else if (studie == 53 && matter >= studie53.cost && studie53.bought == false && studie43.bought == true) {
 		matter -= studie53.cost;
 		studie53.bought = true;
+	} else if (studie == 62 && matter >= studie62.cost && studie62.bought == false && studie51.bought == true && studie52.bought == true && studie53.bought == true) {
+		matter -= studie62.cost;
+		studie62.bought = true;
+		document.querySelector("#autobuyersNav").onclick = function() {window.location.href="autobuyers.htm"};
 	}
 }
 
@@ -334,6 +402,15 @@ function update() {
 		document.querySelector("#studie53Button").classList.add("studieButtonUnavailable");
 		document.querySelector("#studie53Button").classList.remove("studieButtonAvailable");
 	}
+	if (studie62.bought == true) {
+		document.querySelector("#studie62Button").classList.add("studieButtonBought");
+	} else if (matter >= studie62.cost && studie51.bought == true && studie52.bought == true && studie53.bought == true) {
+		document.querySelector("#studie62Button").classList.add("studieButtonAvailable");
+		document.querySelector("#studie62Button").classList.remove("studieButtonUnavailable");
+	} else if (matter < studie62.cost) {
+		document.querySelector("#studie62Button").classList.add("studieButtonUnavailable");
+		document.querySelector("#studie62Button").classList.remove("studieButtonAvailable");
+	}
 	document.querySelector("#studie21Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
 	document.querySelector("#studie22Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
 	document.querySelector("#studie31Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
@@ -362,6 +439,7 @@ function save() {
 	localStorage.setItem("studie51bought", studie51.bought);
 	localStorage.setItem("studie52bought", studie52.bought);
 	localStorage.setItem("studie53bought", studie53.bought);
+	localStorage.setItem("studie62bought", studie62.bought);
 
 	localStorage.setItem("antimatter", antimatter);
 	localStorage.setItem("dimensionBoostCost", dimensionBoost.cost);
@@ -424,6 +502,7 @@ function reset() {
 	localStorage.setItem("studie51bought", false);
 	localStorage.setItem("studie52bought", false);
 	localStorage.setItem("studie53bought", false);
+	localStorage.setItem("studie62bought", false);
 	window.location.href = "index.htm";
 }
 

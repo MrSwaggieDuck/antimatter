@@ -1,0 +1,312 @@
+*{
+	font-family: Arial;
+	padding: 0px;
+	margin: 0px;
+}
+
+header{
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+button{
+	color: black;
+}
+
+footer{
+	background-color: black;
+}
+
+p {
+	display: inline;
+}
+
+svg{
+	position:absolute;
+	left: 20%;
+	width:60%;
+	height: auto;
+	z-index: -1;
+}
+
+line{
+	stroke:black;
+	stroke-width: 1.5%;
+}
+
+table p {
+	margin-top: 5px;
+	display: block;
+}
+
+table td{
+	width: 33%;
+}
+
+#studieTable{
+	border:black solid 3px;
+	border-radius: 30px;
+	width:60%;
+	height: auto;
+	text-align: center;
+	margin:auto;
+}
+
+#autobuyerTable{
+	border:none solid 0px;
+	width:50%;
+	height:auto;
+	text-align:center;
+	margin:auto;
+}
+
+.autobuyerSwitch{
+	width:50%;
+	height:50%;
+	margin-top:10%;
+	border: none solid 1px;
+}
+
+.autobuyerOff{
+	border-color: rgb(255, 0, 0);
+	background-color: rgb(255,100,100);
+}
+
+.autobuyerOn{
+	border-color: rgb(0,255,0);
+	background-color: rgb(100,255,100);
+}
+
+.autobuyer{
+	width:99%;
+	height:250px;
+	border: black solid 2px;
+	border-radius:15px;
+	margin:auto;
+}
+
+.autobuyerButton{
+	height:20%;
+	width: 95%;
+	border: grey solid 2px;
+	border-radius: 15px;
+	margin-top:1%;
+}
+
+.studieButton{
+	border: none solid 2px;
+	border-radius: 15px;
+	width:90%;
+	height: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.studieButton p{
+	display:block;
+}
+
+.studieButtonUnavailable{
+	border-color:black;
+	background-color: #888;
+	color: black;
+}
+
+.studieButtonAvailable{
+	border-color: rgb(0,0,255);
+	background-color: rgb(150,150,255);
+	color: black;
+}
+
+.studieButtonBought{
+	border-color: rgb(0,255,0);
+	background-color: rgb(150,255,150);
+	color: black;
+}
+
+.navBar{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border:black solid 2px;
+}
+
+.navBarButton{
+	border:black solid 2px;
+	border-radius: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 70px;
+	width:23%;
+	font-size: 30px;
+	background-color: #ccc;
+}
+
+.multiplier{
+	position: absolute;
+	left:25%;
+}
+
+.dimAmount{
+	position: absolute;
+	left:45%;
+}
+
+.dimGrowth {
+	position: absolute;
+	left:57%;
+}
+
+.buyButton{
+	height: 40px;
+	width: 15%;
+	position: absolute;
+	left: 70%;
+	border: solid 2px ;
+	border-radius: 15px;
+}
+
+.buy10Button{
+	height: 40px;
+	width: 11%;
+	position: absolute;
+	left: 87%;
+	border: solid 2px;
+	border-radius: 15px;
+}
+
+.buttonAvailable{
+	border-color: green;
+	background-color: rgb(100,255,100);
+}
+.buttonAvailable:hover{
+	background-color: green;
+}
+
+.buttonUnavailable{
+	border-color: red;
+	background-color: rgb(255,100,100);
+}
+
+.buttonUnavailable:hover{
+	background-color: red;
+}
+
+#matterCounter{
+	font-size: 35px;
+}
+
+#antimatterPerSec{
+	display: block;
+	font-size: 10;
+	color: grey;
+}
+
+#prestige{
+	text-align: center;
+	width: 100%;
+}
+
+#dimensionBoost{
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 0%;
+	width:20%;
+	border: black solid 2px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+#dimensionBoost p{
+	display: block;
+	font-size: 20px;
+}
+
+#dimensionBoostButton{
+	border: none solid 1px;
+	border-radius: 15px;
+	height: 100px;
+	width: 90%;
+	margin: 10px;
+}
+
+#galaxy{
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 6%;
+	width:20%;
+	border: black solid 2px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+#galaxy p{
+	display: block;
+	font-size: 20px;
+}
+
+#galaxyButton{
+	border: none solid 1px;
+	border-radius: 15px;
+	height: 100px;
+	width: 90%;
+	margin: 10px;
+}
+
+
+#buyAllButton{
+	text-align: center;
+	border: black solid 2px;
+	border-radius: 15px;
+	margin-top: 10px;
+	width:16%;
+	height:50px;
+}
+
+#dim {
+	margin-top: 5px;
+	border: #555 solid 2px;
+	height: 40px;
+	font-size: 35px;
+}
+
+
+#antimatterAmount{
+	font-size: 30px;
+}
+
+#notationArea{
+	background-color: #ddd;
+	position: absolute;
+	width: 20%;
+	margin-left: 10%;
+	margin-top: 10px;
+	height:130px;
+	border: black solid 1px;
+	border-radius: 15px;
+}
+
+#scientificOption{
+	display:block;
+	font-size: 18px;
+}
+
+#standardOption{
+	display: block;
+	font-size: 18px;
+}
+
+#notationText{
+	font-size: 25px;
+}
+
+#antimatterCounter {
+	text-align: center;
+	border: #555 solid 3px;
+	border-radius: 15px;
+	padding: 10px;
+	width: 24%;
+	height: auto;
+	margin: auto;
+}

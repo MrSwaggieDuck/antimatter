@@ -7,12 +7,13 @@
 <header>
 	<div class="navBar">
           <button onclick='window.location.href="index.htm";' class="navBarButton">Dimensions</button>
-          <button onclick='window.location.href="matterstudies.htm";' class="navBarButton">Matter Studies</button>
+		  <button onclick='window.location.href="matterstudies.htm";' class="navBarButton">Matter Studies</button>
+		  <button id="autobuyersNav" class="navBarButton">Autobuyers</button>
      </div>
 	<div id="matterCounter">You have 0 Matter</div>
 </header>
 <body>
-	<table>
+	<table id="studieTable">
 		<tr>
 			<td></td>
 			<td><button onclick="buyStudie(12)" id="studie12Button" class="studieButton studieButtonUnavailable"><p>Increase Tickspeed by 100%
@@ -39,7 +40,22 @@
 			<td><button onclick="buyStudie(52)" id="studie52Button" class="studieButton studieButtonUnavailable"><p>Increase Eighth Dimensions multiplier based on Antimatter amount</p><p id="studie52Current">Currently: 1x</p><p>Cost: 9 Matter</p></button></td>
 			<td><button onclick="buyStudie(53)" id="studie53Button" class="studieButton studieButtonUnavailable"><p>Increase Dimensional Boost multiplier to 2.4x</p><p>Cost: 40 Matter</p></button></td>
 		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="buyStudie(62)" id="studie62Button" class="studieButton studieButtonUnavailable"><p>Unlock Autobuyers</p><p>Cost: 50 Matter</p></button></td>
+			<td></td>
+		</tr>
+		<svg height="850" width="100%">
+			<line x1="50%" y1="5%" x2="50%" y2="95%" />
+			<line x1="38%" y1="8%" x2="17%" y2="21%" />
+			<line x1="62%" y1="8%" x2="83%" y2="21%" />
+			<line x1="83%" y1="21%" x2="83%" y2="80%" />
+			<line x1="17%" y1="21%" x2="17%" y2="80%" />
+			<line x1="17%" y1="80%" x2="38%" y2="95%" />
+			<line x1="83%" y1="80%" x2="62%" y2="95%"/>
+		</svg>
 	</table>
+	
 </body>
 <script src="matterstudies.js"></script>
 </html>

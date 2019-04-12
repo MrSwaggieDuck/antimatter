@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Antimatter Dimensions NG*</title>
+	    <link rel="stylesheet" type="text/css" href="antimatter.css">
+    </head>
+    <header>
+        <div class="navBar">
+            <button onclick='window.location.href="index.htm";' class="navBarButton">Dimensions</button>
+            <button onclick='window.location.href="matterstudies.htm";' class="navBarButton">Matter Studies</button>
+            <button id="autobuyersNav" class="navBarButton">Autobuyers</button>
+       </div>
+       <div id="matterCounter">You have 0 Matter</div>
+    </header>
+    <body>
+        <table id="autobuyerTable">
+            <tr>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(1)" id="autobuyerButton1" class="autobuyerButton"><p>Buy First Dimension Autobuyer</p><p id="autobuyer1Cost">Cost: 5 Matter</p></button><button onclick="autobuyerSwitch(1)" id="autobuyer1Switch" class="autobuyerSwitch autobuyerOff"><p>Turn First Dimension Autobuyer on</p><p id="autobuyer1Interval">Interval: 10s</p></button></div></td>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(2)" id="autobuyerButton2" class="autobuyerButton"><p>Buy Second Dimension Autobuyer</p><p id="autobuyer2Cost">Cost: 10 Matter</p></button><button onclick="autobuyerSwitch(2)" id="autobuyer2Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Second Dimension Autobuyer on</p><p id="autobuyer2Interval">Interval: 10s</p></button></div></td>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(3)" id="autobuyerButton3" class="autobuyerButton"><p>Buy Third Dimension Autobuyer</p><p id="autobuyer3Cost">Cost: 15 Matter</p></button><button onclick="autobuyerSwitch(3)" id="autobuyer3Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Third Dimension Autobuyer on</p><p id="autobuyer3Interval">Interval: 10s</p></button></div></td>
+            </tr>
+            <tr>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(4)" id="autobuyerButton4" class="autobuyerButton"><p>Buy Fourth Dimension Autobuyer</p><p id="autobuyer4Cost">Cost: 20 Matter</p></button><button onclick="autobuyerSwitch(4)" id="autobuyer4Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Fourth Dimension Autobuyer on</p><p id="autobuyer4Interval">Interval: 10s</p></button></div></td>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(5)" id="autobuyerButton5" class="autobuyerButton"><p>Buy Fifth Dimension Autobuyer</p><p id="autobuyer5Cost">Cost: 25 Matter</p></button><button onclick="autobuyerSwitch(5)" id="autobuyer5Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Fifth Dimension Autobuyer on</p><p id="autobuyer5Interval">Interval: 10s</p></button></div></td>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(6)" id="autobuyerButton6" class="autobuyerButton"><p>Buy Sixth Dimension Autobuyer</p><p id="autobuyer6Cost">Cost: 30 Matter</p></button><button onclick="autobuyerSwitch(6)" id="autobuyer6Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Sixth Dimension Autobuyer on</p><p id="autobuyer6Interval">Interval: 10s</p></button></div></td>
+            </tr>
+            <tr>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(7)" id="autobuyerButton7" class="autobuyerButton"><p>Buy Seventh Dimension Autobuyer</p><p id="autobuyer7Cost">Cost: 35 Matter</p></button><button onclick="autobuyerSwitch(7)" id="autobuyer7Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Seventh Dimension Autobuyer on</p><p id="autobuyer7Interval">Interval: 10s</p></button></div></td>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(8)" id="autobuyerButton8" class="autobuyerButton"><p>Buy Eighth Dimension Autobuyer</p><p id="autobuyer8Cost">Cost: 40 Matter</p></button><button onclick="autobuyerSwitch(8)" id="autobuyer8Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Eighth Dimension Autobuyer on</p><p id="autobuyer8Interval">Interval: 10s</p></button></div></td>
+                <td><div class="autobuyer"><button onclick="buyAutobuyer(9)" id="autobuyerButton9" class="autobuyerButton"><p>Buy Dimensional Boost Autobuyer</p><p id="autobuyer9Cost">Cost: 50 Matter</p></button><button onclick="autobuyerSwitch(9)" id="autobuyer9Switch" class="autobuyerSwitch autobuyerOff"><p>Turn Dimensional Boost Autobuyer on</p><p id="autobuyer9Interval">Interval: 10s</p></button></div></td>
+            </tr>
+        </table>
+    </body>
+    <script src="autobuyer.js"></script>
+</html>
