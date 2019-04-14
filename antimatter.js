@@ -329,7 +329,7 @@ if(JSON.parse(localStorage.getItem("studie73bought")) == true) {
 function update() {
 //Studies
 	if(JSON.parse(localStorage.getItem("studie21bought")) == true) {
-		var studie21Multiplier = Math.log10(antimatter+1);
+		var studie21Multiplier = Math.log10(antimatter)+1;
 	} else {
 		var studie21Multiplier = 1;
 	}
