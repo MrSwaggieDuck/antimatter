@@ -2,6 +2,7 @@
 if(localStorage.hasOwnProperty("antimatter")) {
 	var antimatter = Number(localStorage.getItem("antimatter"));
 	var matter = Number(localStorage.getItem("matter"));
+	var timeSpent = Number(localStorage.getItem("timespent"));
 	if (localStorage.getItem("notation") == "scientific") {
 		document.querySelector("#scientificRadio").checked = true;
 	} else if (localStorage.getItem("notation") == "standard") {
@@ -64,6 +65,7 @@ if(localStorage.hasOwnProperty("antimatter")) {
 	var antimatter = 10;
 	var matter = 0;
 	var notation = "standard";
+	var timeSpent = 0;
 	var dimensionBoost = {
 		cost:10,
 		multiplier:1,
@@ -122,16 +124,11 @@ if(localStorage.hasOwnProperty("antimatter")) {
 if(JSON.parse(localStorage.getItem("studie62bought")) == true) {
 	document.querySelector("#autobuyersNav").onclick = function() {window.location.href="autobuyers.htm"};
 }
-
-var studie12Multiplier = 1;
-var studie21Multiplier = 1;
-var studie22Multiplier = 1;
-var studie31Multiplier = 1;
-var studie32Multiplier = 1;
-var studie41Multiplier = 1;
-var studie42Multiplier = 1;
-var studie51Multiplier = 1;
-var studie52Multiplier = 1;
+if(JSON.parse(localStorage.getItem("studie73bought")) == true) {
+	var studie73Multiplier = 2.1;
+} else {
+	var studie73Multiplier = 2;
+}
 
 //Buy Functions
 	function buyDimension1() {
@@ -142,7 +139,7 @@ var studie52Multiplier = 1;
 			if(dimension1.next10 == 0) {
 				dimension1.next10 = 10;
 				dimension1.cost *= 100;
-				dimension1.multiplier *= 2;
+				dimension1.multiplier *= studie73Multiplier;
 			}	
 		}
 	}
@@ -152,7 +149,7 @@ var studie52Multiplier = 1;
 			dimension1.amount += dimension1.next10;
 			dimension1.next10 = 10;
 			dimension1.cost *= 100;
-			dimension1.multiplier *= 2;
+			dimension1.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyDimension2() {
@@ -163,7 +160,7 @@ var studie52Multiplier = 1;
 			if(dimension2.next10 == 0) {
 				dimension2.next10 = 10;
 				dimension2.cost *= 1000;
-				dimension2.multiplier *= 2;
+				dimension2.multiplier *= studie73Multiplier;
 			}
 		}
 	}
@@ -173,7 +170,7 @@ var studie52Multiplier = 1;
 			dimension2.amount += dimension2.next10;
 			dimension2.next10 = 10;
 			dimension2.cost *= 1000;
-			dimension2.multiplier *= 2;
+			dimension2.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyDimension3() {
@@ -184,7 +181,7 @@ var studie52Multiplier = 1;
 			if(dimension3.next10 == 0) {
 				dimension3.next10 = 10;
 				dimension3.cost *= 10000;
-				dimension3.multiplier *= 2;
+				dimension3.multiplier *= studie73Multiplier;
 			}	
 		}
 	}
@@ -194,7 +191,7 @@ var studie52Multiplier = 1;
 			dimension3.amount += dimension3.next10;
 			dimension3.next10 = 10;
 			dimension3.cost *= 10000;
-			dimension3.multiplier *= 2;
+			dimension3.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyDimension4() {
@@ -205,7 +202,7 @@ var studie52Multiplier = 1;
 			if(dimension4.next10 == 0) {
 				dimension4.next10 = 10;
 				dimension4.cost *= 100000;
-				dimension4.multiplier *= 2;
+				dimension4.multiplier *= studie73Multiplier;
 			}	
 		}
 	}
@@ -215,7 +212,7 @@ var studie52Multiplier = 1;
 			dimension4.amount += dimension4.next10;
 			dimension4.next10 = 10;
 			dimension4.cost *= 100000;
-			dimension4.multiplier *= 2;
+			dimension4.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyDimension5() {
@@ -226,7 +223,7 @@ var studie52Multiplier = 1;
 			if(dimension5.next10 == 0) {
 				dimension5.next10 = 10;
 				dimension5.cost *= 100000;
-				dimension5.multiplier *= 2;
+				dimension5.multiplier *= studie73Multiplier;
 			}	
 		}
 	}
@@ -236,7 +233,7 @@ var studie52Multiplier = 1;
 			dimension5.amount += dimension5.next10;
 			dimension5.next10 = 10;
 			dimension5.cost *= 1000000;
-			dimension5.multiplier *= 2;
+			dimension5.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyDimension6() {
@@ -247,7 +244,7 @@ var studie52Multiplier = 1;
 			if(dimension6.next10 == 0) {
 				dimension6.next10 = 10;
 				dimension6.cost *= 10000000;
-				dimension6.multiplier *= 2;
+				dimension6.multiplier *= studie73Multiplier;
 			}	
 		}
 	}
@@ -257,7 +254,7 @@ var studie52Multiplier = 1;
 			dimension6.amount += dimension6.next10;
 			dimension6.next10 = 10;
 			dimension6.cost *= 100000;
-			dimension6.multiplier *= 2;
+			dimension6.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyDimension7() {
@@ -268,7 +265,7 @@ var studie52Multiplier = 1;
 			if(dimension7.next10 == 0) {
 				dimension7.next10 = 10;
 				dimension7.cost *= 100000000;
-				dimension7.multiplier *= 2;
+				dimension7.multiplier *= studie73Multiplier;
 			}	
 		}
 	}
@@ -278,7 +275,7 @@ var studie52Multiplier = 1;
 			dimension7.amount += dimension7.next10;
 			dimension7.next10 = 10;
 			dimension7.cost *= 100000000;
-			dimension7.multiplier *= 2;
+			dimension7.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyDimension8() {
@@ -289,7 +286,7 @@ var studie52Multiplier = 1;
 			if(dimension8.next10 == 0) {
 				dimension8.next10 = 10;
 				dimension8.cost *= 1000000000;
-				dimension8.multiplier *= 2;
+				dimension8.multiplier *= studie73Multiplier;
 			}	
 		}
 	}
@@ -299,7 +296,7 @@ var studie52Multiplier = 1;
 			dimension8.amount += dimension8.next10;
 			dimension8.next10 = 10;
 			dimension8.cost *= 1000000000;
-			dimension8.multiplier *= 2;
+			dimension8.multiplier *= studie73Multiplier;
 		}
 	}
 	function buyAll(){
@@ -330,59 +327,81 @@ var studie52Multiplier = 1;
 	}
 
 function update() {
-	antimatter += (dimension1.amount*dimension1.multiplier*studie21Multiplier) / 10;
+//Studies
+	if(JSON.parse(localStorage.getItem("studie21bought")) == true) {
+		var studie21Multiplier = Math.log10(antimatter+1);
+	} else {
+		var studie21Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie22bought")) == true) {
+		var studie22Multiplier = Math.log10(antimatter+1)/2;
+	} else {
+		var studie22Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie31bought")) == true) {
+		var studie31Multiplier = Math.log10(antimatter+1)/3;
+	} else {
+		var studie31Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie32bought")) == true) {
+		var studie32Multiplier = Math.log10(antimatter+1)/4;
+	} else {
+		var studie32Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie41bought")) == true) {
+		var studie41Multiplier = Math.log10(antimatter+1)/5;
+	} else {
+		var studie41Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie42bought")) == true) {
+		var studie42Multiplier = Math.log10(antimatter+1)/6;
+	} else {
+		var studie42Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie51bought")) == true) {
+		var studie51Multiplier = Math.log10(antimatter+1)/7;
+	} else {
+		var studie51Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie52bought")) == true) {
+		var studie52Multiplier = Math.log10(antimatter+1)/8;
+	} else {
+		var studie52Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie71bought")) == true) {
+		var studie71Multiplier = Math.pow(timeSpent, 0.5);
+	} else {
+		var studie71Multiplier = 1;
+	}
+	if(JSON.parse(localStorage.getItem("studie81bought")) == true) {
+		studie21Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie22Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie31Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie32Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie41Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie42Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie51Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie52Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+	}
+	if(JSON.parse(localStorage.getItem("studie82bought")) == true) {
+		var studie82Multiplier = 1+Math.sqrt(Math.sqrt(matter));
+	} else {
+		var studie82Multiplier = 1;
+	}
+
+	timeSpent += 1;
+	antimatter += (dimension1.amount*dimension1.multiplier*studie21Multiplier*studie71Multiplier) / 10;
 	dimension1.amount += (dimension2.amount*dimension2.multiplier*studie22Multiplier) / 10;
 	dimension2.amount += (dimension3.amount*dimension3.multiplier*studie31Multiplier) / 10;
 	dimension3.amount += (dimension4.amount*dimension4.multiplier*studie32Multiplier) / 10;
 	dimension4.amount += (dimension5.amount*dimension5.multiplier*studie41Multiplier) / 10;
 	dimension5.amount += (dimension6.amount*dimension6.multiplier*studie42Multiplier) / 10;
 	dimension6.amount += (dimension7.amount*dimension7.multiplier*studie51Multiplier) / 10;
-	dimension7.amount += (dimension8.amount*dimension8.multiplier*studie52Multiplier) / 10;
+	dimension7.amount += (dimension8.amount*dimension8.multiplier*studie52Multiplier*studie82Multiplier) / 10;
 
 	document.querySelector("#antimatterAmount").innerHTML = convert(antimatter) + " Antimatter";
 	document.querySelector("#dimensionBoostText").innerHTML = "Requires " + dimensionBoost.cost + " Eighth Dimensions";
-	document.querySelector("#antimatterPerSec").innerHTML = "+" + convert(dimension1.amount*dimension1.multiplier*studie12Multiplier*studie21Multiplier) + " Antimatter per sec";
-//Studies
-	if(JSON.parse(localStorage.getItem("studie21bought")) == true) {
-		studie21Multiplier = Math.log10(antimatter+1);
-	} else {
-		studie21Multiplier = 1;
-	}
-	if(JSON.parse(localStorage.getItem("studie22bought")) == true) {
-		studie22Multiplier = Math.log10(antimatter+1)/2;
-	} else {
-		studie22Multiplier = 1;
-	}
-	if(JSON.parse(localStorage.getItem("studie31bought")) == true) {
-		studie31Multiplier = Math.log10(antimatter+1)/3;
-	} else {
-		studie31Multiplier = 1;
-	}
-	if(JSON.parse(localStorage.getItem("studie32bought")) == true) {
-		studie32Multiplier = Math.log10(antimatter+1)/4;
-	} else {
-		studie32Multiplier = 1;
-	}
-	if(JSON.parse(localStorage.getItem("studie41bought")) == true) {
-		studie41Multiplier = Math.log10(antimatter+1)/5;
-	} else {
-		studie41Multiplier = 1;
-	}
-	if(JSON.parse(localStorage.getItem("studie42bought")) == true) {
-		studie42Multiplier = Math.log10(antimatter+1)/6;
-	} else {
-		studie42Multiplier = 1;
-	}
-	if(JSON.parse(localStorage.getItem("studie51bought")) == true) {
-		studie51Multiplier = Math.log10(antimatter+1)/7;
-	} else {
-		studie51Multiplier = 1;
-	}
-	if(JSON.parse(localStorage.getItem("studie52bought")) == true) {
-		studie52Multiplier = Math.log10(antimatter+1)/8;
-	} else {
-		studie52Multiplier = 1;
-	}
+	document.querySelector("#antimatterPerSec").innerHTML = "+" + convert(dimension1.amount*dimension1.multiplier*studie12Multiplier*studie21Multiplier *studie71Multiplier) + " Antimatter per sec";
 //Notation
 	if(document.querySelector("#standardRadio").checked) {
 		notation = "standard"
@@ -403,7 +422,7 @@ function update() {
 	}
 	document.querySelector("#dimensionBoostText").innerHTML = "Requires " + Math.ceil(dimensionBoost.cost) + " Eighth Dimensions";
 	if(dimensionBoost.amount >= 5) {
-		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for " + Math.round(Math.pow(1.5, dimensionBoost.amount)) + " Matter";
+		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for " + Math.floor(Math.pow(1.5, dimensionBoost.amount)) + " Matter";
 	} else {
 		document.querySelector("#galaxyButton").innerHTML = "Start a new galaxy for 0 Matter";
 	}
@@ -422,7 +441,7 @@ function update() {
 		document.querySelector("#galaxyButton").classList.add("buttonUnavailable");
 	}
 //First Dimension
-	document.querySelector("#dim1Multiplier").innerHTML = convert(dimension1.multiplier*studie21Multiplier) + "X";
+	document.querySelector("#dim1Multiplier").innerHTML = convert(dimension1.multiplier*studie21Multiplier*studie71Multiplier) + "X";
 	document.querySelector("#dim1Amount").innerHTML = convert(dimension1.amount);
 	document.querySelector("#dim1Growth").innerHTML = "+" + convert(dimension2.amount*dimension2.multiplier*studie12Multiplier*studie22Multiplier) + "/s";
 	document.querySelector("#dim1Button").innerHTML = "Buy First Dimension: " + convert(dimension1.cost) + " Antimatter";
@@ -556,7 +575,7 @@ function update() {
 //Seventh Dimension
 	document.querySelector("#dim7Multiplier").innerHTML = convert(dimension7.multiplier*studie51Multiplier) + "X";
 	document.querySelector("#dim7Amount").innerHTML = convert(dimension7.amount);
-	document.querySelector("#dim7Growth").innerHTML = "+" + convert(dimension8.amount*dimension8.multiplier*studie12Multiplier*studie52Multiplier) + "/s";
+	document.querySelector("#dim7Growth").innerHTML = "+" + convert(dimension8.amount*dimension8.multiplier*studie12Multiplier*studie52Multiplier*studie82Multiplier) + "/s";
 	document.querySelector("#dim7Button").innerHTML = "Buy Seventh Dimension: " + convert(dimension7.cost) + " Antimatter";
 	document.querySelector("#dim7Button10").innerHTML = "Buy til next 10: " + convert(dimension7.cost*dimension7.next10) + " Antimatter";
 
@@ -576,7 +595,7 @@ function update() {
 		document.querySelector("#dim7Button10").classList.remove("buttonAvailable");
 	}
 //Eighth Dimension
-    document.querySelector("#dim8Multiplier").innerHTML = convert(dimension8.multiplier*studie52Multiplier) + "X";
+    document.querySelector("#dim8Multiplier").innerHTML = convert(dimension8.multiplier*studie52Multiplier*studie82Multiplier) + "X";
 	document.querySelector("#dim8Amount").innerHTML = convert(dimension8.amount);
 	document.querySelector("#dim8Growth").innerHTML = "+0/s";
 	document.querySelector("#dim8Button").innerHTML = "Buy Eighth Dimension: " + convert(dimension8.cost) + " Antimatter";
@@ -685,6 +704,7 @@ function save() {
 	localStorage.setItem("dimensionBoostMultiplier", dimensionBoost.multiplier);
 	localStorage.setItem("dimensionBoostAmount", dimensionBoost.amount);
 	localStorage.setItem("matter", matter);
+	localStorage.setItem("timespent", timeSpent);
 
 	localStorage.setItem("dimension1cost", dimension1.cost);
 	localStorage.setItem("dimension1amount", dimension1.amount);
@@ -734,12 +754,16 @@ function reset() {
 
 function dimensionBoostF() {
 	if(dimension8.amount >= dimensionBoost.cost) {
-		if(dimensionBoost.amount < 10) {
-			dimensionBoost.cost = dimensionBoost.amount*10+10;
-		} else if(dimensionBoost.amount >= 10) {
-			dimensionBoost.cost *= 1.1;
-		}
 		dimensionBoost.amount += 1;
+		if(dimensionBoost.amount < 10) {
+			dimensionBoost.cost = (dimensionBoost.amount*10)+10;
+		} else if(dimensionBoost.amount >= 10) {
+			if(JSON.parse(localStorage.getItem("studie72bought")) == true) {
+				dimensionBoost.cost *= 1.08;
+			} else {
+				dimensionBoost.cost *= 1.1;
+			}
+		}
 		if (JSON.parse(localStorage.getItem("studie53bought")) == true) {
 			dimensionBoost.multiplier = Math.pow(2.4, dimensionBoost.amount);
 		} else if (JSON.parse(localStorage.getItem("studie43bought")) == true) {
@@ -751,7 +775,7 @@ function dimensionBoostF() {
 		} else {
 			dimensionBoost.multiplier = Math.pow(2, dimensionBoost.amount);
 		}
-		antimatter = 100;
+		antimatter = 101;
 		dimension1 = {
 			cost:10,
 			amount:0,
@@ -800,6 +824,7 @@ function dimensionBoostF() {
 			multiplier:1*dimensionBoost.multiplier,
 			next10:10,
 		};
+		timeSpent = 0;
 	}
 }
 
@@ -893,9 +918,12 @@ window.onkeypress = function(event) {
 	}
 }
 
-if(JSON.parse(localStorage.getItem("studie12bought")) == true) {
- 	window.setInterval(update, 50);
- 	var studie12Multiplier = 2;
+if(JSON.parse(localStorage.getItem("studie83bought")) == true) {
+ 	window.setInterval(update, 25);
+ 	var studie12Multiplier = 4;
+} else if(JSON.parse(localStorage.getItem("studie12bought")) == true){
+	window.setInterval(update, 50);
+	var studie12Multiplier = 2;
 } else {
 	window.setInterval(update, 100);
 	var studie12Multiplier = 1;

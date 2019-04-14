@@ -1,14 +1,14 @@
 var matter = 0;
 var studie12 = {
-	cost:1,
+	cost:7,
 	bought:false,
 };
 var studie21 = {
-	cost:2,
+	cost:11,
 	bought:false,
 }
 var studie22 = {
-	cost:3,
+	cost:14,
 	bought:false,
 }
 var studie23 = {
@@ -16,11 +16,11 @@ var studie23 = {
 	bought:false,
 }
 var studie31 = {
-	cost:4,
+	cost:17,
 	bought:false,
 }
 var studie32 = {
-	cost:5,
+	cost:21,
 	bought:false,
 }
 var studie33 = {
@@ -28,11 +28,11 @@ var studie33 = {
 	bought:false,
 }
 var studie41 = {
-	cost:6,
+	cost:26,
 	bought:false,
 }
 var studie42 = {
-	cost:7,
+	cost:32,
 	bought:false,
 }
 var studie43 = {
@@ -40,11 +40,11 @@ var studie43 = {
 	bought:false,
 }
 var studie51 = {
-	cost:8,
+	cost:38,
 	bought:false,
 }
 var studie52 = {
-	cost:9,
+	cost:45,
 	bought:false,
 }
 var studie53 = {
@@ -52,64 +52,89 @@ var studie53 = {
 	bought:false,
 }
 var studie62 = {
-	cost:50,
+	cost:100,
 	bought:false,
 }
-var antimatter = 10;
-var matter = 0;
-var dimensionBoost = {
-		cost:10,
-		multiplier:1,
-		amount:0,
+var studie71 = {
+	cost:500,
+	bought:false,
 }
+var studie72 = {
+	cost:700,
+	bought:false,
+}
+var studie73 = {
+	cost:600,
+	bought:false,
+}
+var studie81 = {
+	cost:900,
+	bought:false,
+}
+var studie82 = {
+	cost:1000,
+	bought:false,
+}
+var studie83 = {
+	cost:800,
+	bought:false,
+}
+var matter = 0;
+var antimatter = Number(localStorage.getItem("antimatter"));
+var dimensionBoost = {
+	cost:Number(localStorage.getItem("dimensionBoostCost")),
+	multiplier:Number(localStorage.getItem("dimensionBoostMultiplier")),
+	amount:Number(localStorage.getItem("dimensionBoostAmount")),
+};
 var dimension1 = {
-	cost:10,
-	amount:0,
-	multiplier:1,
-	next10:10,
+	cost:Number(localStorage.getItem("dimension1cost")),
+	amount:Number(localStorage.getItem("dimension1amount")),
+	multiplier:Number(localStorage.getItem("dimension1multiplier")),
+	next10:Number(localStorage.getItem("dimension1next10")),
 };
 var dimension2 = {
-	cost:1000,
-	amount:0,
-	multiplier:1,
-	next10:10,
+	cost:Number(localStorage.getItem("dimension2cost")),
+	amount:Number(localStorage.getItem("dimension2amount")),
+	multiplier:Number(localStorage.getItem("dimension2multiplier")),
+	next10:Number(localStorage.getItem("dimension2next10")),
 };
 var dimension3 = {
-	cost:100000,
-	amount:0,
-	multiplier:1,
-	next10:10,
+	cost:Number(localStorage.getItem("dimension3cost")),
+	amount:Number(localStorage.getItem("dimension3amount")),
+	multiplier:Number(localStorage.getItem("dimension3multiplier")),
+	next10:Number(localStorage.getItem("dimension3next10")),
 };
 var dimension4 = {
-	cost:10000000,
-	amount:0,
-	multiplier:1,
-	next10:10,
+	cost:Number(localStorage.getItem("dimension4cost")),
+	amount:Number(localStorage.getItem("dimension4amount")),
+	multiplier:Number(localStorage.getItem("dimension4multiplier")),
+	next10:Number(localStorage.getItem("dimension4next10")),
 };
 var dimension5 = {
-	cost:1000000000,
-	amount:0,
-	multiplier: 1,
-    next10:10
+	cost:Number(localStorage.getItem("dimension5cost")),
+	amount:Number(localStorage.getItem("dimension5amount")),
+	multiplier: Number(localStorage.getItem("dimension5multiplier")),
+	next10:Number(localStorage.getItem("dimension5next10")),
 };
 var dimension6 = {
-	cost:100000000000,
-	amount:0,
-	multiplier: 1,
-	next10:10
+	cost:Number(localStorage.getItem("dimension6cost")),
+	amount:Number(localStorage.getItem("dimension6amount")),
+	multiplier: Number(localStorage.getItem("dimension6multiplier")),
+	next10:Number(localStorage.getItem("dimension6next10")),
 };
 var dimension7 = {
-	cost:10000000000000,
-	amount:0,
-	multiplier: 1,
-	next10:10,
+	cost:Number(localStorage.getItem("dimension7cost")),
+	amount:Number(localStorage.getItem("dimension7amount")),
+	multiplier: Number(localStorage.getItem("dimension7multiplier")),
+	next10:Number(localStorage.getItem("dimension7next10")),
 };
 var dimension8 = {
-	cost:1000000000000000,
-	amount:0,
-	multiplier: 1,
-	next10:10,
+	cost:Number(localStorage.getItem("dimension8cost")),
+	amount:Number(localStorage.getItem("dimension8amount")),
+	multiplier: Number(localStorage.getItem("dimension8multiplier")),
+	next10:Number(localStorage.getItem("dimension8next10")),
 };
+
 
 if (JSON.parse(localStorage.getItem("studie12bought")) == true || JSON.parse(localStorage.getItem("studie12bought")) == false) {
 	matter = JSON.parse(localStorage.getItem("matter"));
@@ -127,61 +152,12 @@ if (JSON.parse(localStorage.getItem("studie12bought")) == true || JSON.parse(loc
 	studie52.bought = JSON.parse(localStorage.getItem("studie52bought"));
 	studie53.bought = JSON.parse(localStorage.getItem("studie53bought"));
 	studie62.bought = JSON.parse(localStorage.getItem("studie62bought"));
-	var antimatter = Number(localStorage.getItem("antimatter"));
-	var dimensionBoost = {
-		cost:Number(localStorage.getItem("dimensionBoostCost")),
-		multiplier:Number(localStorage.getItem("dimensionBoostMultiplier")),
-		amount:Number(localStorage.getItem("dimensionBoostAmount")),
-	};
-	var dimension1 = {
-		cost:Number(localStorage.getItem("dimension1cost")),
-		amount:Number(localStorage.getItem("dimension1amount")),
-		multiplier:Number(localStorage.getItem("dimension1multiplier")),
-		next10:Number(localStorage.getItem("dimension1next10")),
-	};
-	var dimension2 = {
-		cost:Number(localStorage.getItem("dimension2cost")),
-		amount:Number(localStorage.getItem("dimension2amount")),
-		multiplier:Number(localStorage.getItem("dimension2multiplier")),
-		next10:Number(localStorage.getItem("dimension2next10")),
-	};
-	var dimension3 = {
-		cost:Number(localStorage.getItem("dimension3cost")),
-		amount:Number(localStorage.getItem("dimension3amount")),
-	multiplier:Number(localStorage.getItem("dimension3multiplier")),
-		next10:Number(localStorage.getItem("dimension3next10")),
-	};
-	var dimension4 = {
-		cost:Number(localStorage.getItem("dimension4cost")),
-		amount:Number(localStorage.getItem("dimension4amount")),
-		multiplier:Number(localStorage.getItem("dimension4multiplier")),
-		next10:Number(localStorage.getItem("dimension4next10")),
-	};
-	var dimension5 = {
-		cost:Number(localStorage.getItem("dimension5cost")),
-		amount:Number(localStorage.getItem("dimension5amount")),
-		multiplier: Number(localStorage.getItem("dimension5multiplier")),
-		next10:Number(localStorage.getItem("dimension5next10")),
-	};
-	var dimension6 = {
-		cost:Number(localStorage.getItem("dimension6cost")),
-		amount:Number(localStorage.getItem("dimension6amount")),
-		multiplier: Number(localStorage.getItem("dimension6multiplier")),
-		next10:Number(localStorage.getItem("dimension6next10")),
-	};
-	var dimension7 = {
-		cost:Number(localStorage.getItem("dimension7cost")),
-		amount:Number(localStorage.getItem("dimension7amount")),
-		multiplier: Number(localStorage.getItem("dimension7multiplier")),
-		next10:Number(localStorage.getItem("dimension7next10")),
-	};
-	var dimension8 = {
-		cost:Number(localStorage.getItem("dimension8cost")),
-		amount:Number(localStorage.getItem("dimension8amount")),
-		multiplier: Number(localStorage.getItem("dimension8multiplier")),
-		next10:Number(localStorage.getItem("dimension8next10")),
-	};
-	
+	studie71.bought = JSON.parse(localStorage.getItem("studie71bought"));
+	studie72.bought = JSON.parse(localStorage.getItem("studie72bought"));
+	studie73.bought = JSON.parse(localStorage.getItem("studie73bought"));
+	studie81.bought = JSON.parse(localStorage.getItem("studie81bought"));
+	studie82.bought = JSON.parse(localStorage.getItem("studie82bought"));
+	studie83.bought = JSON.parse(localStorage.getItem("studie83bought"));
 }
 
 if(JSON.parse(localStorage.getItem("studie21bought")) == true) {
@@ -224,7 +200,7 @@ if(JSON.parse(localStorage.getItem("studie52bought")) == true) {
 } else {
 	studie52Multiplier = 1;
 }
-
+ 
 if(JSON.parse(localStorage.getItem("studie62bought")) == true) {
 	document.querySelector("#autobuyersNav").onclick = function() {window.location.href="autobuyers.htm"};
 }
@@ -269,23 +245,32 @@ function buyStudie(studie) {
 	} else if (studie == 53 && matter >= studie53.cost && studie53.bought == false && studie43.bought == true) {
 		matter -= studie53.cost;
 		studie53.bought = true;
-	} else if (studie == 62 && matter >= studie62.cost && studie62.bought == false && studie51.bought == true && studie52.bought == true && studie53.bought == true) {
+	} else if (studie == 62 && matter >= studie62.cost && studie62.bought == false && studie51.bought == true && studie52.bought == true && 			studie53.bought == true) {
 		matter -= studie62.cost;
 		studie62.bought = true;
 		document.querySelector("#autobuyersNav").onclick = function() {window.location.href="autobuyers.htm"};
+	} else if (studie == 71 && matter >= studie71.cost && studie71.bought == false && studie62.bought == true) {
+		matter -= studie71.cost;
+		studie71.bought = true;
+	} else if (studie == 72 && matter >= studie72.cost && studie72.bought == false && studie62.bought == true) {
+		matter -= studie72.cost;
+		studie72.bought = true;
+	} else if (studie == 73 && matter >= studie73.cost && studie73.bought == false && studie62.bought == true) {
+		matter -= studie73.cost;
+		studie73.bought = true;
+	} else if (studie == 81 && matter >= studie81.cost && studie81.bought == false && studie71.bought == true) {
+		matter -= studie81.cost;
+		studie81.bought = true;
+	} else if (studie == 82 && matter >= studie82.cost && studie82.bought == false && studie72.bought == true) {
+		matter -= studie82.cost;
+		studie82.bought = true;
+	} else if (studie == 83 && matter >= studie83.cost && studie83.bought == false && studie73.bought == true) {
+		matter -= studie83.cost;
+		studie83.bought = true;
 	}
 }
 
 function update() {
-	antimatter += (dimension1.amount*dimension1.multiplier*studie21Multiplier) / 10;
-	dimension1.amount += (dimension2.amount*dimension2.multiplier*studie22Multiplier) / 10;
-	dimension2.amount += (dimension3.amount*dimension3.multiplier*studie31Multiplier) / 10;
-	dimension3.amount += (dimension4.amount*dimension4.multiplier*studie32Multiplier) / 10;
-	dimension4.amount += (dimension5.amount*dimension5.multiplier*studie41Multiplier) / 10;
-	dimension5.amount += (dimension6.amount*dimension6.multiplier*studie42Multiplier) / 10;
-	dimension6.amount += (dimension7.amount*dimension7.multiplier*studie51Multiplier) / 10;
-	dimension7.amount += (dimension8.amount*dimension8.multiplier*studie52Multiplier) / 10;
-
 	document.querySelector("#matterCounter").innerHTML = "You have " + Math.floor(matter) + " Matter";
 	if (studie12.bought == true) {
 		document.querySelector("#studie12Button").classList.add("studieButtonBought");
@@ -411,6 +396,60 @@ function update() {
 		document.querySelector("#studie62Button").classList.add("studieButtonUnavailable");
 		document.querySelector("#studie62Button").classList.remove("studieButtonAvailable");
 	}
+	if (studie71.bought == true) {
+		document.querySelector("#studie71Button").classList.add("studieButtonBought");
+	} else if (matter >= studie71.cost && studie62.bought == true) {
+		document.querySelector("#studie71Button").classList.add("studieButtonAvailable");
+		document.querySelector("#studie71Button").classList.remove("studieButtonUnavailable");
+	} else if (matter < studie71.cost) {
+		document.querySelector("#studie71Button").classList.add("studieButtonUnavailable");
+		document.querySelector("#studie71Button").classList.remove("studieButtonAvailable");
+	}
+	if (studie72.bought == true) {
+		document.querySelector("#studie72Button").classList.add("studieButtonBought");
+	} else if (matter >= studie72.cost && studie62.bought == true) {
+		document.querySelector("#studie72Button").classList.add("studieButtonAvailable");
+		document.querySelector("#studie72Button").classList.remove("studieButtonUnavailable");
+	} else if (matter < studie72.cost) {
+		document.querySelector("#studie72Button").classList.add("studieButtonUnavailable");
+		document.querySelector("#studie72Button").classList.remove("studieButtonAvailable");
+	}
+	if (studie73.bought == true) {
+		document.querySelector("#studie73Button").classList.add("studieButtonBought");
+	} else if (matter >= studie73.cost && studie62.bought == true) {
+		document.querySelector("#studie73Button").classList.add("studieButtonAvailable");
+		document.querySelector("#studie73Button").classList.remove("studieButtonUnavailable");
+	} else if (matter < studie73.cost) {
+		document.querySelector("#studie73Button").classList.add("studieButtonUnavailable");
+		document.querySelector("#studie73Button").classList.remove("studieButtonAvailable");
+	}
+	if (studie81.bought == true) {
+		document.querySelector("#studie81Button").classList.add("studieButtonBought");
+	} else if (matter >= studie81.cost && studie71.bought == true) {
+		document.querySelector("#studie81Button").classList.add("studieButtonAvailable");
+		document.querySelector("#studie81Button").classList.remove("studieButtonUnavailable");
+	} else if (matter < studie81.cost) {
+		document.querySelector("#studie81Button").classList.add("studieButtonUnavailable");
+		document.querySelector("#studie81Button").classList.remove("studieButtonAvailable");
+	}
+	if (studie82.bought == true) {
+		document.querySelector("#studie82Button").classList.add("studieButtonBought");
+	} else if (matter >= studie82.cost && studie72.bought == true) {
+		document.querySelector("#studie82Button").classList.add("studieButtonAvailable");
+		document.querySelector("#studie82Button").classList.remove("studieButtonUnavailable");
+	} else if (matter < studie82.cost) {
+		document.querySelector("#studie82Button").classList.add("studieButtonUnavailable");
+		document.querySelector("#studie82Button").classList.remove("studieButtonAvailable");
+	}
+	if (studie83.bought == true) {
+		document.querySelector("#studie83Button").classList.add("studieButtonBought");
+	} else if (matter >= studie83.cost && studie73.bought == true) {
+		document.querySelector("#studie83Button").classList.add("studieButtonAvailable");
+		document.querySelector("#studie83Button").classList.remove("studieButtonUnavailable");
+	} else if (matter < studie83.cost) {
+		document.querySelector("#studie83Button").classList.add("studieButtonUnavailable");
+		document.querySelector("#studie83Button").classList.remove("studieButtonAvailable");
+	}
 	document.querySelector("#studie21Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))*10)/10) + "x";
 	document.querySelector("#studie22Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/2*10)/10) + "x";
 	document.querySelector("#studie31Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/3*10)/10) + "x";
@@ -419,6 +458,7 @@ function update() {
 	document.querySelector("#studie42Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/6*10)/10) + "x";
 	document.querySelector("#studie51Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/7*10)/10) + "x";
 	document.querySelector("#studie52Current").innerHTML = "Currently: " + (Math.round(Math.log10(Number(localStorage.getItem("antimatter")))/8*10)/10) + "x";
+	document.querySelector("#studie71Current").innerHTML = "Currently: " + (Math.round(Math.pow((Number(localStorage.getItem("timespent"))), 0.5)*10)/10) + "x";
 	
 	save();
 }
@@ -440,6 +480,12 @@ function save() {
 	localStorage.setItem("studie52bought", studie52.bought);
 	localStorage.setItem("studie53bought", studie53.bought);
 	localStorage.setItem("studie62bought", studie62.bought);
+	localStorage.setItem("studie71bought", studie71.bought);
+	localStorage.setItem("studie72bought", studie72.bought);
+	localStorage.setItem("studie73bought", studie73.bought);
+	localStorage.setItem("studie81bought", studie81.bought);
+	localStorage.setItem("studie82bought", studie82.bought);
+	localStorage.setItem("studie83bought", studie83.bought);
 
 	localStorage.setItem("antimatter", antimatter);
 	localStorage.setItem("dimensionBoostCost", dimensionBoost.cost);
@@ -489,20 +535,6 @@ function save() {
 
 function reset() {
 	localStorage.clear();
-	localStorage.setItem("studie12bought", false);
-	localStorage.setItem("studie21bought", false);
-	localStorage.setItem("studie22bought", false);
-	localStorage.setItem("studie23bought", false);
-	localStorage.setItem("studie31bought", false);
-	localStorage.setItem("studie32bought", false);
-	localStorage.setItem("studie33bought", false);
-	localStorage.setItem("studie41bought", false);
-	localStorage.setItem("studie42bought", false);
-	localStorage.setItem("studie43bought", false);
-	localStorage.setItem("studie51bought", false);
-	localStorage.setItem("studie52bought", false);
-	localStorage.setItem("studie53bought", false);
-	localStorage.setItem("studie62bought", false);
 	window.location.href = "index.htm";
 }
 
