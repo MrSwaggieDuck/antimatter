@@ -831,7 +831,7 @@ function dimensionBoostF() {
 function newGalaxy() {
 	if(dimensionBoost.amount >= 5) {
 		matter += Math.pow(1.5, dimensionBoost.amount);
-		antimatter = 10;
+		antimatter = 101;
 		dimensionBoost = {
 			cost:10,
 			multiplier:1,
