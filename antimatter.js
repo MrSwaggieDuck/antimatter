@@ -374,14 +374,14 @@ function update() {
 		var studie71Multiplier = 1;
 	}
 	if(JSON.parse(localStorage.getItem("studie81bought")) == true) {
-		studie21Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
-		studie22Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
-		studie31Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
-		studie32Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
-		studie41Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
-		studie42Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
-		studie51Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
-		studie52Multiplier *= Math.sqrt(Math.log10(dimension1.amount));
+		studie21Multiplier *= Math.sqrt(Math.log10(dimension1.amount+1));
+		studie22Multiplier *= Math.sqrt(Math.log10(dimension2.amount+1));
+		studie31Multiplier *= Math.sqrt(Math.log10(dimension3.amount+1));
+		studie32Multiplier *= Math.sqrt(Math.log10(dimension4.amount+1));
+		studie41Multiplier *= Math.sqrt(Math.log10(dimension5.amount+1));
+		studie42Multiplier *= Math.sqrt(Math.log10(dimension6.amount+1));
+		studie51Multiplier *= Math.sqrt(Math.log10(dimension7.amount+1));
+		studie52Multiplier *= Math.sqrt(Math.log10(dimension8.amount+1));
 	}
 	if(JSON.parse(localStorage.getItem("studie82bought")) == true) {
 		var studie82Multiplier = 1+Math.sqrt(Math.sqrt(matter));
